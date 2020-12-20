@@ -1,0 +1,19 @@
+.modal-body.hidden-print {
+  max-height: fit-content;
+}
+
+.modal-dialog.modal-lg > .modal-content {
+  margin-top: 0;
+}
+
+.modal-dialog.modal-lg {
+  height: -webkit-fill-available !important;
+}
+
+.modal-dialog.modal-lg .modal-content .modal-header {
+  height: 40px !important;
+}
+
+.modal.fade .modal-dialog {
+  transition: transform 150ms ease-out !important;
+}

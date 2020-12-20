@@ -1,0 +1,34 @@
+{
+  "name": "Exportação de matrícula",
+  "version": "1.0",
+  "description": "Adiciona funcionalidades para facilitar a usabilidade ao lidar com o site da CRI",
+  "permissions": ["activeTab", "declarativeContent"],
+  "options_page": "./src/options.html",
+  "background": {
+    "scripts": ["./src/background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.cri-rs.com.br/*"],
+      "css": ["./src/aumenta-visualizacao.css"],
+      "js": ["./src/lib/jquery-3.4.1.min.js", "./src/adiciona-exportacao.js"]
+    }
+  ],
+  "page_action": {
+    "default_popup": "./src/popup.html",
+    "default_icon": {
+      "16": "./src/images/logo16.png",
+      "32": "./src/images/logo32.png",
+      "48": "./src/images/logo48.png",
+      "128": "./src/images/logo128.png"
+    }
+  },
+  "icons": {
+    "16": "./src/images/logo16.png",
+    "32": "./src/images/logo32.png",
+    "48": "./src/images/logo48.png",
+    "128": "./src/images/logo128.png"
+  },
+  "manifest_version": 2
+}
